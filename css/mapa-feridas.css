@@ -1,0 +1,375 @@
+/* LILIANE LIMA — Mapa das Feridas Emocionais */
+  :root {
+    /* Paleta oficial do site: Ivory, Nude, Rose, Stone, Terracota (cor real medida do site) */
+    --ivory: #ede9e3;
+    --nude: #e7d7c9;
+    --rose: #d4b2a7;
+    --stone: #cdc6c3;
+    --latte: #a38f85;
+    --terracota: #966b5c;
+
+    --bg: var(--ivory);
+    --surface: #ffffff;
+    --ink: #3b2e28;
+    --ink-soft: #6e5b51;
+    --primary: var(--ink);
+    --primary-soft: var(--nude);
+    --self: var(--stone);
+    --self-soft: #f1efee;
+    --other: var(--rose);
+    --other-soft: #f7ece9;
+    --line: #e1d9d0;
+    --danger: #703d2c;
+    --danger-soft: #f6e6e0;
+    --focus-ring: var(--ink);
+    --radius: 6px;
+    --max-width: 44rem;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, legend {
+    font-family: 'Fraunces', Georgia, serif;
+    color: var(--primary);
+    font-weight: 600;
+    line-height: 1.25;
+    margin: 0;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: -999px;
+    top: 0;
+    background: var(--ink);
+    color: #fff;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0 0 var(--radius) 0;
+    z-index: 100;
+    text-decoration: none;
+  }
+  .skip-link:focus { left: 0; }
+
+  a { color: var(--ink); }
+
+  :focus-visible {
+    outline: 3px solid var(--focus-ring);
+    outline-offset: 2px;
+  }
+
+  header.site-header {
+    background: var(--nude);
+    color: var(--ink);
+    padding: 2.5rem 1.25rem 2rem;
+  }
+
+  .header-inner { max-width: var(--max-width); margin: 0 auto; }
+
+  header.site-header p.eyebrow {
+    margin: 0 0 0.4rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--terracota);
+  }
+
+  header.site-header h1 { font-size: clamp(1.6rem, 4vw, 2.15rem); }
+
+  header.site-header p.lede {
+    margin-top: 0.9rem;
+    max-width: 38rem;
+    color: var(--ink-soft);
+    font-size: 1.02rem;
+  }
+
+  main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  .intro {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.4rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.98rem;
+    color: var(--ink-soft);
+  }
+
+  .intro strong { color: var(--ink); }
+
+  .convite-sessao {
+    background: var(--nude);
+    border: 1px solid var(--terracota);
+    border-radius: var(--radius);
+    padding: 1.4rem 1.5rem;
+    margin: 2rem 0;
+    text-align: left;
+  }
+
+  .convite-sessao h2 {
+    color: var(--ink);
+    font-size: 1.25rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .convite-sessao p {
+    color: var(--ink-soft);
+    margin: 0 0 1rem;
+    font-size: 0.98rem;
+    max-width: 34rem;
+  }
+
+  .convite-sessao a.botao-convite {
+    display: inline-block;
+    background: var(--terracota);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.7rem 1.3rem;
+    border-radius: var(--radius);
+  }
+
+  .convite-sessao a.botao-convite:hover { background: #7d5748; }
+
+  fieldset { border: none; padding: 0; margin: 0 0 2.25rem; }
+
+  legend { font-size: 1.2rem; margin-bottom: 0.9rem; padding: 0; }
+
+  .campo { margin-bottom: 1rem; }
+
+  .campo label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.92rem;
+    margin-bottom: 0.35rem;
+  }
+
+  input[type="text"], textarea {
+    width: 100%;
+    font: inherit;
+    padding: 0.65rem 0.75rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--ink);
+  }
+
+  textarea { resize: vertical; min-height: 5.5rem; }
+
+  .dica { font-size: 0.85rem; color: var(--ink-soft); margin-top: 0.3rem; }
+
+  .lista-feridas { display: grid; gap: 0.75rem; }
+
+  .opcao-ferida {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 0.9rem 1rem;
+    display: flex;
+    gap: 0.8rem;
+    align-items: flex-start;
+  }
+
+  .opcao-ferida.selecionada {
+    border-color: var(--terracota);
+    background: var(--primary-soft);
+  }
+
+  .opcao-ferida input[type="checkbox"] {
+    width: 1.15rem;
+    height: 1.15rem;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+    accent-color: var(--terracota);
+  }
+
+  .opcao-ferida .texto-opcao strong {
+    display: block;
+    font-family: 'Fraunces', serif;
+    font-size: 1.05rem;
+    color: var(--ink);
+    margin-bottom: 0.2rem;
+  }
+
+  .opcao-ferida .texto-opcao span {
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+  }
+
+  .opcao-ferida.desabilitada { opacity: 0.45; }
+
+  #status-selecao {
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    margin-top: 0.6rem;
+    min-height: 1.2em;
+  }
+
+  #status-selecao.aviso { color: var(--danger); font-weight: 600; }
+
+  .cartao-ferida {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 5px solid var(--terracota);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.4rem 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cartao-ferida h2 { font-size: 1.3rem; margin-bottom: 0.3rem; }
+
+  .cartao-ferida > p.definicao {
+    color: var(--ink-soft);
+    font-size: 0.92rem;
+    margin: 0 0 1.1rem;
+    padding-bottom: 1.1rem;
+    border-bottom: 1px dashed var(--line);
+  }
+
+  .bloco-campo {
+    border-left: 4px solid var(--self);
+    background: var(--self-soft);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 0.9rem 1rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .bloco-campo.outros { border-left-color: var(--other); background: var(--other-soft); }
+
+  .bloco-campo label { color: var(--ink); }
+
+  .bloco-campo textarea { border-color: transparent; background: #fffffe; }
+
+  details.orientacao {
+    margin-top: 1.1rem;
+    border: 1px solid var(--terracota);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  details.orientacao summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 0.85rem 1.1rem;
+    background: var(--nude);
+    font-weight: 600;
+    font-family: 'Fraunces', serif;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  details.orientacao summary::-webkit-details-marker { display: none; }
+
+  details.orientacao summary::after {
+    content: "Ver orientação";
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--terracota);
+    border: 1px solid var(--terracota);
+    border-radius: var(--radius);
+    padding: 0.3rem 0.7rem;
+    flex-shrink: 0;
+  }
+
+  details.orientacao[open] summary::after { content: "Ocultar"; }
+
+  .conteudo-orientacao {
+    padding: 1rem 1.1rem 1.1rem;
+    background: #fffdfb;
+  }
+
+  .conteudo-orientacao p.aviso-profissional {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    margin: 0 0 0.8rem;
+    font-style: italic;
+  }
+
+  .conteudo-orientacao ul {
+    margin: 0;
+    padding-left: 1.1rem;
+    font-size: 0.95rem;
+  }
+
+  .conteudo-orientacao li { margin-bottom: 0.4rem; }
+  .conteudo-orientacao li:last-child { margin-bottom: 0; }
+
+  .acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+  }
+
+  button {
+    font: inherit;
+    font-weight: 600;
+    padding: 0.7rem 1.3rem;
+    border-radius: var(--radius);
+    border: 1px solid transparent;
+    cursor: pointer;
+  }
+
+  .botao-primario { background: var(--terracota); color: #fff; }
+  .botao-primario:hover { background: #7d5748; }
+
+  .botao-secundario { background: var(--surface); color: var(--terracota); border-color: var(--terracota); }
+  .botao-secundario:hover { background: var(--primary-soft); }
+
+  .botao-perigo { background: var(--surface); color: var(--danger); border-color: var(--danger); margin-left: auto; }
+  .botao-perigo:hover { background: var(--danger-soft); }
+
+  #mensagem-status {
+    margin-top: 1rem;
+    padding: 0.7rem 1rem;
+    border-radius: var(--radius);
+    background: var(--self-soft);
+    color: #3a3530;
+    font-size: 0.92rem;
+    display: none;
+  }
+  #mensagem-status.visivel { display: block; }
+  #mensagem-status.erro { background: var(--danger-soft); color: var(--danger); }
+
+  footer.site-footer {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1.25rem 3rem;
+    color: var(--ink-soft);
+    font-size: 0.85rem;
+  }
+
+  footer.site-footer p { margin: 0.4rem 0; }
+
+  @media print {
+    header.site-header, .acoes, #mensagem-status, .convite-sessao { display: none !important; }
+    body { background: #fff; }
+    .cartao-ferida, .intro, .bloco-campo, details.orientacao { border-color: #999 !important; background: #fff !important; box-shadow: none !important; }
+    details.orientacao { display: block; }
+    details.orientacao summary::after { content: none; }
+    textarea, input { border: 1px solid #999 !important; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }

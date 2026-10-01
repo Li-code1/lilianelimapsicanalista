@@ -1,0 +1,49 @@
+/* LILIANE LIMA — Páginas internas */
+
+.llp{
+  --ivory:#EDE9E3; --nude:#E7D7C9; --rose:#D4B2A7; --stone:#CDC6C3; --latte:#A38F85;
+  --paper:#EDE9E3; --paper-alt:#E7D7C9; --ink:#3B2E28; --ink-soft:#6E5B51; --rose-dark:#96695C;
+  --line:rgba(59,46,40,0.14); --radius:26px; --shadow:0 20px 45px -20px rgba(59,46,40,0.25);
+  font-family:'Work Sans',sans-serif; color:var(--ink); background:var(--paper); line-height:1.65;
+}
+.llp *, .llp *::before, .llp *::after{ box-sizing:border-box; min-width:0; }
+.llp a{ color:inherit; text-decoration:none; }
+.llp h1,.llp h2,.llp h3{ font-family:'Fraunces',serif; font-weight:600; line-height:1.2; margin:0 0 .5em; color:var(--ink); overflow-wrap:break-word; }
+.llp p{ margin:0 0 1em; }
+.llp section{ padding:3.5rem 1.5rem; }
+.llp .wrap{ max-width:900px; margin:0 auto; }
+.llp .center{ text-align:center; }
+.llp .eyebrow{
+  font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--rose-dark); display:inline-flex; align-items:center; gap:.5em; margin-bottom:1em;
+}
+.llp .eyebrow::before{ content:""; width:22px; height:1px; background:var(--rose-dark); display:inline-block; }
+.llp .btn{
+  display:inline-flex; align-items:center; gap:.6em; font-weight:600; font-size:.98rem;
+  padding:.95em 1.7em; border-radius:100px; border:none; cursor:pointer; background:var(--rose-dark); color:#fff;
+  transition:transform .25s ease;
+}
+.llp .btn:hover{ transform:translateY(-2px); }
+.llp .btn-ghost{ background:transparent; border:1.5px solid var(--ink); color:var(--ink); }
+.llp .pagina-hero{ background:var(--ink); color:var(--ivory); text-align:center; padding:4rem 1.5rem 3.2rem; }
+.llp .pagina-hero h1{ color:var(--ivory); font-size:clamp(1.9rem,4vw,2.6rem); }
+.llp .pagina-hero p{ color:rgba(237,233,227,.75); max-width:600px; margin:0 auto; }
+.llp .card{ background:#fff; border-radius:var(--radius); padding:2.2rem; box-shadow:var(--shadow); margin-bottom:1.6rem; }
+.llp .grid-2{ display:grid; grid-template-columns:1fr 1fr; gap:1.4rem; }
+.llp .grid-3{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.4rem; }
+.llp .mini-card{ background:var(--paper-alt); border-radius:16px; padding:1.4rem; }
+.llp .mini-card h3{ font-size:1.02rem; margin-bottom:.4rem; }
+.llp .mini-card p{ font-size:.9rem; color:var(--ink-soft); margin:0; }
+.llp .cta-final{ background:var(--ink); color:var(--ivory); border-radius:var(--radius); padding:2.4rem; text-align:center; }
+.llp .cta-final h2{ color:var(--ivory); }
+.llp .cta-final p{ color:rgba(237,233,227,.75); }
+.llp .aviso{ background:var(--nude); border-radius:14px; padding:1rem 1.3rem; font-size:.88rem; }
+.llp .links-internos{ display:flex; flex-wrap:wrap; gap:.8rem; margin-top:1.4rem; }
+.llp .links-internos a{ font-size:.85rem; font-weight:600; color:var(--rose-dark); background:var(--paper-alt); padding:.5em 1.1em; border-radius:100px; }
+@media (max-width:700px){ .llp .grid-2, .llp .grid-3{ grid-template-columns:1fr; } }
+
+/* ---------------- Ajustes de semântica (HTML) sem mudança visual ---------------- */
+.llp aside.aviso{ margin:0; }
+.llp nav.links-internos, .llp nav.trilhas-tabs{ }
+.llp .quote{ font-family:'Fraunces',serif; font-style:italic; font-size:1.2rem; color:var(--rose-dark);
+  border-left:3px solid var(--latte); padding-left:1.2rem; margin:1.5rem 0; }

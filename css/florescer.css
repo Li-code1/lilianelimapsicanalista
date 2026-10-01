@@ -1,0 +1,63 @@
+/* LILIANE LIMA — florescer */
+.llp .florescer-hero{ background:var(--ink); color:var(--ivory); text-align:center; padding:4.5rem 1.5rem 3.5rem; }
+.llp .florescer-hero .eyebrow{ color:var(--rose); }
+.llp .florescer-hero .eyebrow::before{ background:var(--rose); }
+.llp .florescer-hero h1{ color:var(--ivory); font-size:clamp(2rem,4.2vw,2.9rem); }
+.llp .florescer-hero .metodo-nome{ font-family:'Fraunces',serif; font-style:italic; color:var(--rose); font-size:clamp(2.2rem,5vw,3.2rem); display:block; margin:.2em 0; }
+.llp .florescer-hero p{ color:rgba(237,233,227,.75); max-width:600px; margin:0 auto; }
+
+.llp .beneficios-grid{ display:grid; grid-template-columns:repeat(5,1fr); gap:1.2rem; margin-top:2.5rem; }
+.llp .beneficio{ text-align:center; }
+.llp .beneficio .ico-wrap{
+  width:64px; height:64px; margin:0 auto .8rem; border-radius:50%; background:var(--paper-alt);
+  display:flex; align-items:center; justify-content:center; color:var(--rose-dark);
+}
+.llp .beneficio .ico-wrap svg{ width:28px; height:28px; }
+.llp .beneficio p{ font-size:.82rem; font-weight:600; color:var(--ink-soft); margin:0; }
+@media (max-width:880px){ .llp .beneficios-grid{ grid-template-columns:repeat(3,1fr); } }
+@media (max-width:560px){ .llp .beneficios-grid{ grid-template-columns:repeat(2,1fr); } }
+
+.llp .sessoes-lista{ display:flex; flex-direction:column; gap:.9rem; margin-top:1.6rem; }
+.llp .sessao-item{
+  display:flex; align-items:flex-start; gap:1.1rem; background:#fff; border-radius:16px;
+  padding:1.1rem 1.4rem; box-shadow:var(--shadow);
+}
+.llp .sessao-item .num{
+  width:40px; height:40px; border-radius:50%; background:var(--ink); color:var(--rose);
+  font-family:'Fraunces',serif; font-weight:700; font-size:1.05rem; flex:none;
+  display:flex; align-items:center; justify-content:center;
+}
+.llp .sessao-item h3{ font-size:1rem; margin:0 0 .2rem; }
+.llp .sessao-item p{ font-size:.88rem; color:var(--ink-soft); margin:0; }
+
+.llp .info-bar{
+  display:flex; flex-wrap:wrap; gap:1.2rem; justify-content:center; margin-top:2.4rem;
+}
+.llp .info-item{
+  display:flex; align-items:center; gap:.8rem; background:var(--paper-alt); border-radius:100px;
+  padding:.9rem 1.5rem; font-size:.9rem; font-weight:500;
+}
+.llp .info-item svg{ width:1.4em; height:1.4em; color:var(--rose-dark); flex:none; }
+
+.llp .cta-gratuita{
+  background:var(--ink); color:var(--ivory); border-radius:var(--radius); padding:2.4rem; text-align:center; margin-top:2rem;
+}
+.llp .cta-gratuita h2{ color:var(--ivory); }
+.llp .cta-gratuita p{ color:rgba(237,233,227,.75); }
+.llp .selo-gratis{
+  display:inline-block; background:var(--rose-dark); color:#fff; font-weight:700; font-size:.82rem;
+  padding:.5em 1.2em; border-radius:100px; margin-bottom:1rem;
+}
+
+.llp .trilhas-tabs{ display:flex; gap:.8rem; justify-content:center; flex-wrap:wrap; margin-bottom:2.2rem; }
+.llp .trilhas-tabs a{
+  font-weight:600; font-size:.92rem; padding:.7em 1.5em; border-radius:100px;
+  border:1.5px solid var(--line); color:var(--ink-soft); background:#fff;
+}
+.llp .trilha-bloco{ margin-bottom:3.2rem; scroll-margin-top:100px; }
+.llp .trilha-titulo{ text-align:center; margin-bottom:1.6rem; }
+.llp .trilha-titulo span.tag-trilha{
+  display:inline-block; background:var(--ink); color:var(--rose); font-family:'Space Mono',monospace;
+  font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; padding:.4em 1em; border-radius:100px; margin-bottom:.7rem;
+}
+.llp .trilha-cta{ text-align:center; margin-top:1.6rem; }

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teste das 5 Feridas Emocionais Online e Grátis | Liliane Lima</title>
+<meta name="description" content="Descubra suas 2 principais feridas emocionais com este teste gratuito e receba orientação profissional para começar a curar cada uma delas.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#E7D7C9">
+<link rel="canonical" href="https://lilianelimapsicanalista.com.br/mapa-feridas-emocionais">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Liliane Lima | Psicanálise e Terapia Online">
+<meta property="og:title" content="Teste das 5 Feridas Emocionais Online e Grátis | Liliane Lima">
+<meta property="og:description" content="Descubra suas 2 principais feridas emocionais com este teste gratuito e receba orientação profissional para começar a curar cada uma delas.">
+<meta property="og:url" content="https://lilianelimapsicanalista.com.br/mapa-feridas-emocionais">
+<meta property="og:image" content="https://yata-apix-51980ff6-2a68-4629-9304-ba82b19d59c9.s3-object.locaweb.com.br/b5308dbc43b745118f1cab4bd3bd99e5.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/mapa-feridas.css">
+</head>
+<body>
+
+<a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <p class="eyebrow">Autoconhecimento</p>
+    <h1>Mapa das Suas Feridas Emocionais</h1>
+    <p class="lede">Descubra quais são as suas duas principais feridas emocionais, reflita sobre o que você precisa desenvolver e receba uma orientação profissional sobre o que ajuda a curar cada uma delas.</p>
+  </div>
+</header>
+
+<main id="conteudo-principal">
+
+  <p class="intro">
+    <strong>Como funciona:</strong> leia as cinco feridas emocionais abaixo e marque as duas com que você mais se identifica hoje. Para cada uma, você vai encontrar um espaço para refletir por conta própria e, em seguida, pode abrir a orientação profissional sobre o caminho de cura.
+  </p>
+
+  <form id="form-mapa" novalidate>
+
+    <fieldset>
+      <div class="campo">
+        <label for="nome-pessoa">Seu nome ou apelido (opcional)</label>
+        <input type="text" id="nome-pessoa" name="nome-pessoa" autocomplete="off">
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Marque as duas feridas com que você mais se identifica</legend>
+      <div class="lista-feridas" id="lista-feridas" role="group" aria-describedby="status-selecao">
+        <!-- opções inseridas via JavaScript -->
+      </div>
+      <p id="status-selecao" aria-live="polite">Selecione até 2 feridas.</p>
+    </fieldset>
+
+    <div id="detalhe-feridas" aria-live="polite">
+      <!-- cartões das feridas selecionadas inseridos via JavaScript -->
+    </div>
+
+    <div id="convite-sessao-container">
+      <!-- convite para agendar sessão inserido via JavaScript quando houver feridas selecionadas -->
+    </div>
+
+    <div class="acoes">
+      <button type="submit" class="botao-primario" id="botao-salvar">Salvar minhas respostas</button>
+      <button type="button" class="botao-secundario" id="botao-imprimir">Imprimir / Salvar em PDF</button>
+      <button type="button" class="botao-perigo" id="botao-limpar">Recomeçar</button>
+    </div>
+
+    <p id="mensagem-status" role="status"></p>
+  </form>
+
+</main>
+
+<footer class="site-footer">
+  <p>Este teste é uma ferramenta de autoconhecimento e não substitui acompanhamento terapêutico. Se algo do que você identificou aqui mexeu com você, considere buscar um espaço de escuta profissional.</p>
+  <p>Liliane Lima — Psicanalista · lilianelimapsicanalista.com.br</p>
+</footer>
+
+<script src="/js/mapa-feridas.js" defer></script>
+
+</body>
+</html>
