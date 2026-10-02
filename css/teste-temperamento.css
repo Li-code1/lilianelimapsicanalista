@@ -1,0 +1,74 @@
+/* LILIANE LIMA — Teste de Temperamento
+   Depende das variáveis e classes de pages.css (.llp). */
+
+.llp .tt-wrap{ max-width:900px; margin:0 auto; }
+
+/* ---------------- Introdução ---------------- */
+.llp .tt-temperamentos{ display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; margin:1.6rem 0; }
+.llp .tt-temperamento{ background:var(--paper-alt); border-radius:16px; padding:1.1rem; text-align:center; }
+.llp .tt-temperamento strong{ display:block; font-family:'Fraunces',serif; margin-bottom:.3rem; }
+.llp .tt-temperamento span{ font-size:.82rem; color:var(--ink-soft); }
+.llp .tt-destaque{
+  background:var(--paper-alt); border-left:3px solid var(--rose-dark); padding:1rem 1.3rem;
+  border-radius:12px; font-style:italic; color:var(--ink);
+}
+.llp .tt-lista{ margin:0 0 1rem 1.2rem; padding:0; color:var(--ink-soft); }
+
+/* ---------------- Formulário ---------------- */
+.llp .tt-campo-nome label{ display:block; font-weight:600; margin-bottom:.5rem; }
+.llp .tt-campo-nome input{
+  width:100%; padding:.9em 1em; border-radius:12px; border:1.5px solid var(--line);
+  font-family:inherit; font-size:1rem; margin-bottom:1.6rem; background:#fff; color:var(--ink);
+}
+.llp .tt-campo-nome input:focus{ outline:none; border-color:var(--rose-dark); }
+
+.llp .tt-pergunta{ border:0; padding:0; margin:0 0 1.8rem; }
+.llp .tt-pergunta legend{ font-weight:600; padding:0; margin-bottom:.7rem; }
+.llp .tt-opcao{
+  position:relative; display:flex; align-items:center; gap:.8rem; padding:.9rem 1.1rem; margin:.5rem 0;
+  border-radius:12px; background:var(--paper-alt); cursor:pointer; transition:background .2s;
+}
+.llp .tt-opcao:hover{ background:var(--stone); }
+.llp .tt-opcao input{ position:absolute; opacity:0; width:1px; height:1px; }
+.llp .tt-opcao span{ flex:1; font-size:.95rem; display:flex; align-items:center; gap:.8rem; }
+.llp .tt-opcao span::before{
+  content:""; flex:none; width:18px; height:18px; border-radius:50%;
+  border:2px solid var(--rose-dark); background:#fff; box-shadow:inset 0 0 0 3px #fff;
+}
+.llp .tt-opcao input:checked + span{ font-weight:700; color:var(--rose-dark); }
+.llp .tt-opcao input:checked + span::before{ background:var(--rose-dark); }
+.llp .tt-opcao input:focus-visible + span{ outline:3px solid var(--rose-dark); outline-offset:6px; border-radius:6px; }
+
+.llp .tt-erro{
+  background:#F6DCD4; color:#6B2A1B; border-radius:12px; padding:.9rem 1.2rem;
+  font-size:.92rem; margin-bottom:1rem;
+}
+.llp .tt-erro[hidden]{ display:none; }
+.llp .tt-enviar{ width:100%; justify-content:center; }
+
+/* ---------------- Resultado ---------------- */
+.llp .tt-resultado[hidden]{ display:none; }
+.llp .tt-resultado h2{ font-size:1.5rem; }
+.llp .tt-resultado h2:focus{ outline:none; }
+.llp .tt-rotulo{ font-weight:700; margin:1rem 0 .2rem; }
+.llp .tt-barras{ margin:1.6rem 0; display:grid; gap:.7rem; max-width:460px; }
+.llp .tt-barra{ display:grid; grid-template-columns:104px 1fr 44px; align-items:center; gap:.7rem; font-size:.88rem; }
+.llp .tt-barra-trilho{ background:var(--paper-alt); border-radius:100px; height:14px; overflow:hidden; }
+.llp .tt-barra-preench{ display:block; height:100%; border-radius:100px; background:var(--rose-dark); }
+.llp .tt-barra-valor{ text-align:right; color:var(--ink-soft); font-variant-numeric:tabular-nums; }
+.llp .tt-acoes{ display:flex; flex-wrap:wrap; gap:.8rem; margin:1.4rem 0; }
+.llp .tt-acoes .btn-ghost{ background:transparent; border:1.5px solid var(--ink); color:var(--ink); }
+.llp .tt-chamada{ font-weight:700; color:var(--rose-dark); }
+.llp .tt-aviso{ margin-top:1.4rem; }
+
+/* ---------------- Vídeos ---------------- */
+.llp .tt-videos{ display:grid; grid-template-columns:1fr 1fr; gap:1.4rem; }
+.llp .tt-video{ background:var(--paper-alt); border-radius:18px; padding:1rem; }
+.llp .tt-video iframe{ width:100%; aspect-ratio:16/9; height:auto; border-radius:12px; border:0; display:block; }
+.llp .tt-video p{ margin:.8rem 0 0; font-weight:600; font-size:.92rem; }
+
+@media (max-width:700px){
+  .llp .tt-temperamentos{ grid-template-columns:1fr 1fr; }
+  .llp .tt-videos{ grid-template-columns:1fr; }
+  .llp .tt-barra{ grid-template-columns:92px 1fr 40px; }
+}
