@@ -195,7 +195,7 @@
     resultado.appendChild(el("p", "tt-chamada", fechamento[0]));
     resultado.appendChild(el("p", null, fechamento[1]));
     resultado.appendChild(el("p", null, fechamento[2]));
-    resultado.appendChild(el("p", "aviso tt-aviso", "Este teste é uma ferramenta de autoconhecimento e não substitui uma avaliação psicológica."));
+    resultado.appendChild(el("p", "aviso tt-aviso", "Este teste é uma ferramenta de autoconhecimento e não substitui a uma avaliação clínica."));
 
     resultado.hidden = false;
     resultado.scrollIntoView({ behavior: "smooth", block: "start" });
