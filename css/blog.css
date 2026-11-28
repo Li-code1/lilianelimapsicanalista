@@ -1,0 +1,59 @@
+/* LILIANE LIMA — Blog (lista de artigos, filtro por categoria, CTA final)
+   Depende das variáveis e classes de pages.css (.llp). */
+
+.llp .blog-lista{ max-width:820px; margin:0 auto; }
+
+/* ---------------- Filtro por categorias ---------------- */
+.llp .categorias{ display:flex; flex-wrap:wrap; gap:.7rem; justify-content:center; margin-bottom:2.8rem; }
+.llp .categorias button{
+  font:inherit; font-size:.85rem; font-weight:600; padding:.5em 1.2em; border-radius:100px;
+  border:1.5px solid transparent; background:var(--paper-alt); color:var(--ink-soft); cursor:pointer;
+  transition:background .2s, color .2s;
+}
+.llp .categorias button:hover{ background:var(--rose); color:var(--ink); }
+.llp .categorias button[aria-pressed="true"]{ background:var(--rose-dark); color:#fff; }
+
+/* ---------------- Artigo ---------------- */
+.llp .artigo{
+  background:#fff; border-radius:var(--radius); box-shadow:var(--shadow);
+  overflow:hidden; margin-bottom:1.8rem; scroll-margin-top:96px;
+}
+.llp .artigo[hidden]{ display:none; }
+.llp .artigo-capa{ width:100%; height:150px; display:block; }
+.llp .artigo-conteudo{ padding:1.8rem 2.1rem 2rem; }
+.llp .artigo-tag{
+  font-family:'Space Mono',monospace; font-size:.7rem; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--rose-dark);
+}
+.llp .artigo h2{ font-size:1.4rem; margin:.4rem 0 .3rem; }
+.llp .artigo-meta{ font-size:.78rem; color:var(--ink-soft); margin-bottom:.9rem; display:block; }
+.llp .artigo-resumo{ color:var(--ink-soft); }
+
+.llp .artigo details summary{
+  list-style:none; cursor:pointer; font-weight:600; color:var(--rose-dark); font-size:.92rem;
+  display:inline-flex; align-items:center; margin-top:.3rem;
+}
+.llp .artigo details summary::-webkit-details-marker{ display:none; }
+.llp .artigo details summary .fechar{ display:none; }
+.llp .artigo details[open] summary .abrir{ display:none; }
+.llp .artigo details[open] summary .fechar{ display:inline; }
+
+.llp .artigo-corpo{ margin-top:1.2rem; padding-top:1.2rem; border-top:1px solid var(--line); }
+.llp .artigo-corpo h3{ font-size:1.1rem; margin-top:1.2rem; }
+.llp .artigo-corpo p{ color:var(--ink); }
+.llp .artigo-cta{
+  margin-top:1.4rem; background:var(--paper-alt); border-radius:14px; padding:1.1rem 1.3rem; font-size:.92rem;
+}
+.llp .artigo-cta a{ font-weight:700; color:var(--rose-dark); text-decoration:underline; text-underline-offset:3px; }
+
+/* ---------------- Bloco final ---------------- */
+.llp .blog-final{ background:var(--paper-alt); border-radius:var(--radius); padding:2.4rem; text-align:center; max-width:820px; margin:0 auto; }
+.llp .blog-final h2{ font-size:1.5rem; margin-bottom:.4rem; }
+.llp .blog-final p{ color:var(--ink-soft); margin-bottom:1.2rem; }
+.llp .blog-final .links-internos{ justify-content:center; margin-top:0; }
+.llp .blog-final .links-internos a{ background:#fff; }
+
+@media (max-width:600px){
+  .llp .artigo-conteudo{ padding:1.5rem 1.4rem 1.6rem; }
+  .llp .blog-final{ padding:2rem 1.4rem; }
+}

@@ -1,0 +1,13 @@
+/* Utilitários (carregado por último; substitui os antigos estilos inline) */
+.llp .pt-0{ padding-top:0; }
+.llp .pt-3{ padding-top:3rem; }
+.llp .pt-25{ padding-top:2.5rem; }
+.llp .bg-alt{ background:var(--paper-alt); }
+.llp .eyebrow--light{ color:var(--rose); }
+.llp .text-soft{ color:var(--ink-soft); }
+.llp .text-strong{ font-weight:600; color:var(--ink); }
+.llp .mt-lg{ margin-top:1.6rem; }
+.llp .link-more{ font-size:.85rem; font-weight:600; color:var(--rose-dark); }
+.llp .link-more--light{ color:var(--rose); }
+.llp .trilha-h{ font-size:1.3rem; }
+.llp .trilha-desc{ color:var(--ink-soft); max-width:560px; margin:0 auto; }

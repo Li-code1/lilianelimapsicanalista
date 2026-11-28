@@ -1,0 +1,31 @@
+/* LILIANE LIMA — posicionadas */
+.llp .posicionadas-hero .wrap{ display:grid; grid-template-columns:1fr .8fr; gap:2.5rem; align-items:center; text-align:left; }
+.llp .posicionadas-hero h1{ text-align:left; }
+.llp .posicionadas-hero p{ text-align:left; margin-left:0; }
+.llp .posicionadas-foto{ border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); aspect-ratio:4/5; }
+.llp .posicionadas-foto img{ width:100%; height:100%; object-fit:cover; display:block; }
+@media (max-width:800px){
+  .llp .posicionadas-hero .wrap{ grid-template-columns:1fr; text-align:center; }
+  .llp .posicionadas-hero h1, .llp .posicionadas-hero p{ text-align:center; margin-left:auto; margin-right:auto; }
+  .llp .posicionadas-foto{ max-width:280px; margin:0 auto; }
+}
+
+.llp .itens-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:1.2rem; margin-top:2.2rem; }
+.llp .item-card{ background:#fff; border-radius:18px; padding:1.6rem; box-shadow:var(--shadow); display:flex; gap:1rem; align-items:flex-start; }
+.llp .item-card .num-item{
+  width:38px; height:38px; border-radius:50%; background:var(--ink); color:var(--rose);
+  font-family:'Fraunces',serif; font-weight:700; flex:none; display:flex; align-items:center; justify-content:center;
+}
+.llp .item-card h3{ font-size:1rem; margin:0 0 .3rem; }
+.llp .item-card p{ font-size:.87rem; color:var(--ink-soft); margin:0; }
+@media (max-width:700px){ .llp .itens-grid{ grid-template-columns:1fr; } }
+
+.llp .lista-check{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:1rem; }
+.llp .lista-check li{ display:flex; gap:.9rem; align-items:flex-start; font-size:.95rem; color:var(--ink-soft); }
+.llp .lista-check li strong{ color:var(--ink); }
+.llp .lista-check svg{ width:1.3em; height:1.3em; color:var(--rose-dark); flex:none; margin-top:.15em; }
+
+.llp .selo-programa{
+  display:inline-block; background:var(--rose-dark); color:#fff; font-weight:700; font-size:.82rem;
+  padding:.5em 1.2em; border-radius:100px; margin-bottom:1rem;
+}

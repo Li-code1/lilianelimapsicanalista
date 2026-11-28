@@ -1,0 +1,159 @@
+/* LILIANE LIMA — Mapa das Feridas Emocionais
+   Depende das variáveis e classes de base.css e pages.css (.llp).
+   Tudo fica dentro de .mapa para não interferir no cabeçalho e no rodapé do site. */
+
+.llp .mapa{
+  --terracota:#966B5C; --terracota-d:#7D5748;
+  --surface:#fff;
+  --self:var(--stone); --self-soft:#F1EFEE;
+  --other:var(--rose); --other-soft:#F7ECE9;
+  --danger:#703D2C; --danger-soft:#F6E6E0;
+  max-width:44rem; margin:0 auto;
+}
+
+.llp .mapa h2, .llp .mapa legend{
+  font-family:'Fraunces',Georgia,serif; color:var(--ink); font-weight:600; line-height:1.25; margin:0;
+}
+
+/* ---------- introdução e avisos ---------- */
+.llp .mapa .intro{
+  background:var(--surface); border:1px solid var(--line); border-radius:16px;
+  padding:1.25rem 1.4rem; margin-bottom:1.5rem; font-size:.98rem; color:var(--ink-soft);
+}
+.llp .mapa .intro strong{ color:var(--ink); }
+.llp .mapa .mapa-aviso{
+  margin-top:2rem; padding:1rem 1.3rem; background:var(--nude); border-radius:14px;
+  font-size:.88rem; color:var(--ink-soft);
+}
+.llp .mapa .mapa-aviso a{ color:var(--rose-dark); font-weight:600; text-decoration:underline; text-underline-offset:3px; }
+
+/* ---------- convite para sessão (inserido pelo JS) ---------- */
+.llp .mapa .convite-sessao{
+  background:var(--nude); border:1px solid var(--terracota); border-radius:16px;
+  padding:1.4rem 1.5rem; margin:2rem 0; text-align:left;
+}
+.llp .mapa .convite-sessao h2{ font-size:1.25rem; margin-bottom:.6rem; }
+.llp .mapa .convite-sessao p{ color:var(--ink-soft); margin:0 0 1rem; font-size:.98rem; max-width:34rem; }
+.llp .mapa .convite-sessao a.botao-convite{
+  display:inline-block; background:var(--terracota); color:#fff; font-weight:600;
+  padding:.75rem 1.4rem; border-radius:999px; transition:background .2s, transform .2s;
+}
+.llp .mapa .convite-sessao a.botao-convite:hover{ background:var(--terracota-d); transform:translateY(-2px); }
+
+/* ---------- campos ---------- */
+.llp .mapa fieldset{ border:none; padding:0; margin:0 0 2.25rem; }
+.llp .mapa legend{ font-size:1.2rem; margin-bottom:.9rem; padding:0; }
+.llp .mapa .campo{ margin-bottom:1rem; }
+.llp .mapa .campo label{ display:block; font-weight:600; font-size:.92rem; margin-bottom:.35rem; }
+.llp .mapa input[type="text"], .llp .mapa textarea{
+  width:100%; font:inherit; padding:.65rem .75rem; border:1px solid var(--line);
+  border-radius:10px; background:var(--surface); color:var(--ink);
+}
+.llp .mapa textarea{ resize:vertical; min-height:5.5rem; }
+.llp .mapa .dica{ font-size:.85rem; color:var(--ink-soft); margin-top:.3rem; }
+
+/* ---------- lista de feridas ---------- */
+.llp .mapa .lista-feridas{ display:grid; gap:.75rem; }
+.llp .mapa .opcao-ferida{
+  background:var(--surface); border:1px solid var(--line); border-radius:12px;
+  padding:.9rem 1rem; display:flex; gap:.8rem; align-items:flex-start; cursor:pointer;
+  transition:border-color .2s, background .2s;
+}
+.llp .mapa .opcao-ferida:hover{ border-color:var(--terracota); }
+.llp .mapa .opcao-ferida.selecionada{ border-color:var(--terracota); background:var(--nude); }
+.llp .mapa .opcao-ferida input[type="checkbox"]{
+  width:1.15rem; height:1.15rem; margin-top:.2rem; flex-shrink:0; accent-color:var(--terracota);
+}
+.llp .mapa .opcao-ferida .texto-opcao strong{
+  display:block; font-family:'Fraunces',serif; font-size:1.05rem; color:var(--ink); margin-bottom:.2rem;
+}
+.llp .mapa .opcao-ferida .texto-opcao span{ font-size:.9rem; color:var(--ink-soft); }
+.llp .mapa .opcao-ferida.desabilitada{ opacity:.45; }
+
+.llp .mapa #status-selecao{ font-size:.88rem; color:var(--ink-soft); margin-top:.6rem; min-height:1.2em; }
+.llp .mapa #status-selecao.aviso{
+  background:none; padding:0; border-radius:0; color:var(--danger); font-weight:600;
+}
+
+/* ---------- cartões das feridas escolhidas ---------- */
+.llp .mapa .cartao-ferida{
+  background:var(--surface); border:1px solid var(--line); border-left:5px solid var(--terracota);
+  border-radius:14px; padding:1.25rem 1.4rem 1.4rem; margin-bottom:1.5rem;
+}
+.llp .mapa .cartao-ferida h2{ font-size:1.3rem; margin-bottom:.3rem; }
+.llp .mapa .cartao-ferida > p.definicao{
+  color:var(--ink-soft); font-size:.92rem; margin:0 0 1.1rem; padding-bottom:1.1rem; border-bottom:1px dashed var(--line);
+}
+.llp .mapa .bloco-campo{
+  border-left:4px solid var(--self); background:var(--self-soft);
+  border-radius:0 12px 12px 0; padding:.9rem 1rem; margin-bottom:.9rem;
+}
+.llp .mapa .bloco-campo.outros{ border-left-color:var(--other); background:var(--other-soft); }
+.llp .mapa .bloco-campo label{ color:var(--ink); }
+.llp .mapa .bloco-campo textarea{ border-color:transparent; background:#fffffe; }
+
+/* ---------- orientação profissional ---------- */
+.llp .mapa details.orientacao{
+  margin-top:1.1rem; border:1px solid var(--terracota); border-radius:12px; overflow:hidden;
+}
+.llp .mapa details.orientacao summary{
+  cursor:pointer; list-style:none; padding:.85rem 1.1rem; background:var(--nude);
+  font-weight:600; font-family:'Fraunces',serif; color:var(--ink);
+  display:flex; align-items:center; justify-content:space-between; gap:.75rem;
+}
+.llp .mapa details.orientacao summary::-webkit-details-marker{ display:none; }
+.llp .mapa details.orientacao summary::after{
+  content:"Ver orientação"; font-family:'Work Sans',sans-serif; font-weight:600; font-size:.85rem;
+  color:var(--terracota); border:1px solid var(--terracota); border-radius:999px; padding:.3rem .8rem; flex-shrink:0;
+}
+.llp .mapa details.orientacao[open] summary::after{ content:"Ocultar"; }
+.llp .mapa .conteudo-orientacao{ padding:1rem 1.1rem 1.1rem; background:#fffdfb; }
+.llp .mapa .conteudo-orientacao p.aviso-profissional{
+  font-size:.85rem; color:var(--ink-soft); margin:0 0 .8rem; font-style:italic;
+}
+.llp .mapa .conteudo-orientacao ul{ margin:0; padding-left:1.1rem; font-size:.95rem; }
+.llp .mapa .conteudo-orientacao li{ margin-bottom:.4rem; }
+.llp .mapa .conteudo-orientacao li:last-child{ margin-bottom:0; }
+
+/* ---------- ações ---------- */
+.llp .mapa .acoes{
+  display:flex; flex-wrap:wrap; gap:.75rem; margin-top:2rem; padding-top:1.5rem; border-top:1px solid var(--line);
+}
+.llp .mapa button{
+  font:inherit; font-weight:600; padding:.75rem 1.4rem; border-radius:999px;
+  border:1.5px solid transparent; cursor:pointer; transition:background .2s, transform .2s;
+}
+.llp .mapa button:hover{ transform:translateY(-1px); }
+.llp .mapa .botao-primario{ background:var(--terracota); color:#fff; }
+.llp .mapa .botao-primario:hover{ background:var(--terracota-d); }
+.llp .mapa .botao-secundario{ background:var(--surface); color:var(--terracota); border-color:var(--terracota); }
+.llp .mapa .botao-secundario:hover{ background:var(--nude); }
+.llp .mapa .botao-perigo{ background:var(--surface); color:var(--danger); border-color:var(--danger); margin-left:auto; }
+.llp .mapa .botao-perigo:hover{ background:var(--danger-soft); }
+
+.llp .mapa #mensagem-status{
+  margin-top:1rem; padding:.7rem 1rem; border-radius:12px; background:var(--self-soft);
+  color:#3A3530; font-size:.92rem; display:none;
+}
+.llp .mapa #mensagem-status.visivel{ display:block; }
+.llp .mapa #mensagem-status.erro{ background:var(--danger-soft); color:var(--danger); }
+
+@media (max-width:560px){
+  .llp .mapa .botao-perigo{ margin-left:0; }
+  .llp .mapa .acoes button{ width:100%; }
+}
+
+/* ---------- impressão / salvar em PDF: só o conteúdo do mapa ---------- */
+@media print{
+  .llp .nav-wrap, .llp .site-footer, .llp .wa-float, .llp .skip-link,
+  .llp .mapa .acoes, .llp .mapa #mensagem-status, .llp .mapa .convite-sessao, .llp .mapa .mapa-aviso{ display:none !important; }
+  .llp, body.llp{ background:#fff; }
+  .llp .pagina-hero{ background:#fff; color:#000; padding:0 0 1rem; }
+  .llp .pagina-hero h1, .llp .pagina-hero p{ color:#000; }
+  .llp .mapa .cartao-ferida, .llp .mapa .intro, .llp .mapa .bloco-campo, .llp .mapa details.orientacao{
+    border-color:#999 !important; background:#fff !important; box-shadow:none !important;
+  }
+  .llp .mapa details.orientacao{ display:block; }
+  .llp .mapa details.orientacao summary::after{ content:none; }
+  .llp .mapa textarea, .llp .mapa input{ border:1px solid #999 !important; }
+}

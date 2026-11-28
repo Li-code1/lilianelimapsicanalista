@@ -1,0 +1,11 @@
+/* LILIANE LIMA — faq */
+.llp .faq-list{ display:flex; flex-direction:column; gap:1rem; }
+.llp .faq-item{ background:#fff; border-radius:18px; box-shadow:var(--shadow); overflow:hidden; }
+.llp .faq-item summary{
+  list-style:none; cursor:pointer; padding:1.3rem 1.6rem; font-family:'Fraunces',serif;
+  font-weight:600; font-size:1.02rem; display:flex; align-items:center; justify-content:space-between; gap:1rem;
+}
+.llp .faq-item summary::-webkit-details-marker{ display:none; }
+.llp .faq-item summary::after{ content:"+"; font-size:1.5rem; color:var(--rose-dark); font-weight:400; flex:none; transition:transform .25s ease; }
+.llp .faq-item[open] summary::after{ transform:rotate(45deg); }
+.llp .faq-item .faq-answer{ padding:0 1.6rem 1.4rem; color:var(--ink-soft); font-size:.94rem; line-height:1.65; }
